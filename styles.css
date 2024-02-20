@@ -55,6 +55,12 @@ button:hover {
     color: red;
 }
 
+.question-math {
+    font-size: 20px; 
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 #custom-keyboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

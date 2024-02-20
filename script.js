@@ -26,7 +26,7 @@ function generateQuestion() {
     const randomTabuada = selectedTabuadas[Math.floor(Math.random() * selectedTabuadas.length)];
     const num2 = Math.floor(Math.random() * 10) + 1; // Número aleatório de 1 a 10
     currentAnswer = randomTabuada * num2; // Armazena a resposta atual
-    questionContainer.innerHTML = `Tabuada selecionada: ${randomTabuada}<br><br>Pergunta:<br>${randomTabuada} x ${num2} = ?`;
+    questionContainer.innerHTML = `<br><span class="question-math">Pergunta:<br>${randomTabuada} x ${num2} = ?</span>`;
 }
 
 function startChallenge() {
