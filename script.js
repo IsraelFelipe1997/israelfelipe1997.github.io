@@ -3,28 +3,24 @@ const answerInput = document.getElementById('answer');
 const resultContainer = document.getElementById('result');
 const checkboxes = document.querySelectorAll('.tabuada');
 const customKeys = document.querySelectorAll('.key');
-const zeroButton = document.getElementById('zero');
+const zeroButton = document.querySelector('.zero');
 const clearButton = document.getElementById('clear');
 let score = 0;
 let currentAnswer = null; // Armazena a resposta atual para comparação
 let selectedTabuadas = []; // Array para armazenar as tabuadas selecionadas
 let dataframe = []; // Array para armazenar os dados
 
-
 customKeys.forEach(key => {
   key.addEventListener('click', () => {
-    answerInput.value += key.textContent;
-  });
+    answerInput.value += key.textContent;})
 });
 
 zeroButton.addEventListener('click', () => {
-  answerInput.value += '0';
-});
+  answerInput.value += '0';});
 
-clearButton.addEventListener('click', () => {
-  answerInput.value = '';
+  clearButton.addEventListener('click', () => {
+    answerInput.value = null;
 });
-
 
 function generateQuestion() {
     const randomTabuada = selectedTabuadas[Math.floor(Math.random() * selectedTabuadas.length)];
