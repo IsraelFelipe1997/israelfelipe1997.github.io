@@ -57,9 +57,9 @@ function checkAnswer() {
 
     if (userAnswer === currentAnswer) {
         score++;
-        resultContainer.textContent = 'Correto!';
+        resultContainer.innerHTML  = '<span class="result-green">Correto!❤️</span>';
     } else {
-        resultContainer.textContent = `Incorreto! A resposta correta é ${currentAnswer}.`;
+        resultContainer.innerHTML  = `<span class="result-red">Incorreto!😠 A resposta correta é ${currentAnswer}.</span>`;
     }
     answerInput.value = ''; // Limpa o campo de resposta
     setTimeout(() => {
