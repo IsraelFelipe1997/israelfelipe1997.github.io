@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabuada Challenge</h1>
+        <fieldset>
+            <legend>Escolha as tabuadas:</legend>
+            <label><input type="checkbox" class="tabuada" value="2"> Tabuada do 2</label>
+            <label><input type="checkbox" class="tabuada" value="3"> Tabuada do 3</label>
+            <label><input type="checkbox" class="tabuada" value="4"> Tabuada do 4</label>
+            <label><input type="checkbox" class="tabuada" value="5"> Tabuada do 5</label>
+            <label><input type="checkbox" class="tabuada" value="6"> Tabuada do 6</label>
+            <label><input type="checkbox" class="tabuada" value="7"> Tabuada do 7</label>
+            <label><input type="checkbox" class="tabuada" value="8"> Tabuada do 8</label>
+            <label><input type="checkbox" class="tabuada" value="9"> Tabuada do 9</label>
+            <label><input type="checkbox" class="tabuada" value="10"> Tabuada do 10</label>
+        </fieldset>
+        <button onclick="startChallenge()">Iniciar Desafio</button>
+        <div id="question"></div>
+        <input type="number" id="answer" placeholder="Resposta">
+        <button onclick="checkAnswer()">Verificar</button>
+        <div id="result"></div>
+        <button onclick="exportToCSV()">Exportar Resultados para o Excel</button> <!-- Novo botão -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="export.js"></script>
+</body>
+</html>
