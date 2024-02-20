@@ -24,6 +24,21 @@
         <button onclick="startChallenge()">Iniciar Desafio</button>
         <div id="question"></div>
         <input type="number" id="answer" placeholder="Resposta">
+
+        <div id="custom-keyboard">
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button><br>
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button><br>
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button><br>
+            <button style="grid-column: 2 / span 2;">0</button>
+            <button id="clear" style="grid-column: 4;">Limpar</button>
+        </div>
+             
         <button onclick="checkAnswer()">Verificar</button>
         <div id="result"></div>
         <button onclick="exportToCSV()">Exportar Resultados para o Excel</button> <!-- Novo botão -->

@@ -2,10 +2,29 @@ const questionContainer = document.getElementById('question');
 const answerInput = document.getElementById('answer');
 const resultContainer = document.getElementById('result');
 const checkboxes = document.querySelectorAll('.tabuada');
+const customKeys = document.querySelectorAll('.key');
+const zeroButton = document.getElementById('zero');
+const clearButton = document.getElementById('clear');
 let score = 0;
 let currentAnswer = null; // Armazena a resposta atual para comparação
 let selectedTabuadas = []; // Array para armazenar as tabuadas selecionadas
 let dataframe = []; // Array para armazenar os dados
+
+
+customKeys.forEach(key => {
+  key.addEventListener('click', () => {
+    answerInput.value += key.textContent;
+  });
+});
+
+zeroButton.addEventListener('click', () => {
+  answerInput.value += '0';
+});
+
+clearButton.addEventListener('click', () => {
+  answerInput.value = '';
+});
+
 
 function generateQuestion() {
     const randomTabuada = selectedTabuadas[Math.floor(Math.random() * selectedTabuadas.length)];
@@ -52,3 +71,4 @@ function checkAnswer() {
         generateQuestion(); // Gera uma nova pergunta após verificar a resposta
     }, 3000); // 3000 milissegundos = 3 segundos
 }
+
