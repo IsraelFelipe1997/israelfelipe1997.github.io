@@ -43,6 +43,16 @@ function startChallenge() {
     }
 }
 
+function tocarSomAcerto() {
+    const audioAcerto = document.getElementById('audio-acerto');
+    audioAcerto.play();
+}
+
+function tocarSomErro() {
+    const audioErro = document.getElementById('audio-erro');
+    audioErro.play();
+}
+
 function checkAnswer() {
     const userAnswer = parseInt(answerInput.value);
     const status = userAnswer === currentAnswer ? 'Acerto' : 'Erro';
@@ -58,8 +68,10 @@ function checkAnswer() {
     if (userAnswer === currentAnswer) {
         score++;
         resultContainer.innerHTML  = '<span class="result-green">Correto!❤️</span>';
+        tocarSomAcerto(); // Chama a função para reproduzir o som de acerto
     } else {
         resultContainer.innerHTML  = `<span class="result-red">Incorreto!😠 A resposta correta é ${currentAnswer}.</span>`;
+        tocarSomErro(); // Chama a função para reproduzir o som de erro
     }
     answerInput.value = ''; // Limpa o campo de resposta
     setTimeout(() => {
