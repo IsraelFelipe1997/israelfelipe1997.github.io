@@ -17,6 +17,12 @@ h1 {
     margin-top: 0;
 }
 
+.title-challenge{
+    color: #fd3b22;
+    border: 1px solid #fd3b22;
+    padding: 10px;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
